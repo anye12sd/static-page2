@@ -1,0 +1,50 @@
+#slider{
+    position:relative;
+    width:550px;
+    height:313px;
+    margin:0 auto;
+}
+
+#slider .mainSlider{
+    width:100%;
+}
+#slider .mainSlider li{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    list-style: none;
+}
+#slider .mainSlider li:first-child{display:block}
+#slider .control{position:absolute;top:50%;margin-top:-30px}
+#slider .control .prev{
+    background: url(../img/png/9.png);
+    float:left;
+    z-index:1
+}
+#slider .control .next{
+    background: url(../img/png/8.png);
+    float:right;
+    z-index:2
+}
+#slider .list{
+    padding:0;
+    bottom:30px;
+    left:50%;
+    /*当元素宽度不确定时，可以使用translate来设置左右居中*/
+    transform:translate(-50%,0);
+    position:absolute;
+    list-style: none;
+}
+#slider .list li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffFFFF;
+    margin-right:10px;
+    cursor:pointer
+}
+#slider .list li.active{
+    background:purple;
+}

@@ -1,57 +1,371 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Static-page2 by anye12sd</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Static-page2</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/anye12sd/static-page2" class="btn">View on GitHub</a>
-      <a href="https://github.com/anye12sd/static-page2/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/anye12sd/static-page2/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <title>Title</title>
+    <!--兼容移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--jQuery-->
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <!--bootstrap的js文件-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--bootstrap样式-->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #h3 h3{
+            text-align:center;
+            font-size:50px;
+            margin-top:120px;
+            font-weight: bold;
+        }
+        .row .h2{color:#912b38}
+        .navbar{margin-bottom:0;}
+        .offset_left{
+            position:relative;
+            margin-top:15px;
+        }
+        #pay h6{
+            background: url("img/prc.png") no-repeat;
+            height:25px;
+            line-height: 25px;
+            font-size:18px;
+            color:#fff;
+            padding-left:20px;
+            width:80px;
+            position: absolute;
+            top:0;
+            left:15px;
+        }
+        @media (max-width: 768px){
+            .navbar-header .navbar-brand img{
+                width:70%;
+                position:relative;
+                z-index:1;
+            }
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+            .btn1 a{
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+            .banner-left {
+                float: left;
+                margin-top:30%;
+            }
+        }
+        .btn1{
+            text-align:center
+        }
+        .btn1 a{
+            color: #fff;
+            font-weight: 400;
+            font-size: 12px;
+            padding: 4px 7px;
+            background: #97262A;
+            text-align:center;
+            margin:0 auto
+        }
+        img{
+            vertical-align: middle;
+        }
+        #pay h4{
+            color:#912b38;
+        }
+        #mid{
+            margin-top:40px;
+            background: url("img/nature.jpg");
+            width:100%;
+            background-size:cover;
+            background-position:center center;
+        }
+        .mid_top{
+            width: 34%;
+            float: right;
+            background: rgba(92, 17, 20, 0.89);
+            text-align: center;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            padding: 8% 21px;
+            margin-top: 1.6%;
+        }
+        .bg span{
+            background: url(img/f-1.png) no-repeat;
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0 auto;
+        }
+        .bg h4{
+            font-size: 1.5em;
+            font-weight: 400;
+            color: #97262A;
+            margin: 15px 0 0 0;
+            text-align: center;
+        }
+        .bg p{
+            font-size: 15px;
+            margin-top: 1.6%;
+            line-height: 1.6em;
+            color: #999;
+            text-align: center;
+        }
+        .footer {
+            padding: 4em 0px;
+            background: #2a2017;
+            color:#fff;
+            margin:0 auto;
+        }
+        #slide{
+            background: url("img/111.jpg");
+            width:100%;
+            background-size:cover;
+            background-position:center center;
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+        }
+        .slider{
+            background: rgba(252, 252, 252, 0.32);
+            text-align: center;
+            padding: 1em 0;
+            width: 94%;
+            margin: 0 auto;
+        }
+        .banner-left {
+            width: 25%;
+            float: left;
+            margin-top:30%;
+        }
+        .slider img{
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -o-border-radius: 100%;
+            -ms-border-radius: 100%;
+            width: 55% !important;
+            margin: 0 auto;
+        }
+        .slider h3{
+            color:#fff;
+        }
+        .slider a{
+            color: #FFFFFF;
+            font-weight: 400;
+            font-size: 12px;
+            padding: 4px 7px;
+            background: #97262A;
+        }
+        #slider{
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+        }
+        .carousel-indicators{
+            width:18%
+        }
+        .img-thumbnail{
+            border:#fff;
+        }
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+    </style>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <button class="btn btn-default navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-header">
+        <a href="#" class="navbar-brand" style="margin-top:-14px;margin-left:80px;"><img src="img/logo-2.png" class="img-responsive" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="margin-right:50px;">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<div id="slider">
+    <div class="carousel slide" id="slide" data-ride="carousel" data-interval="1000">
+        <ul class="carousel-indicators">
+            <li class="active" data-target="#slide" data-slide-to="0"></li>
+            <li data-target="#slide" data-slide-to="1"></li>
+            <li data-target="#slide" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 banner-left" style="margin-left:25%">
+                        <div class="slider">
+                        <img src="img/b-1.jpg" alt="">
+                        <h3>QUISQUE PHARETRA</h3>
+                            <a href="">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 banner-left">
+                        <div class="slider">
+                        <img src="img/b-2.jpg" alt="">
+                            <h3>DONEC INTERDUM</h3>
+                            <a href="">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 banner-left" style="margin-left:25%">
+                        <div class="slider">
+                            <img src="img/b-2.jpg" alt="">
+                            <h3>DONEC INTERDUM</h3>
+                            <a href="">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 banner-left">
+                        <div class="slider">
+                            <img src="img/b-3.jpg" alt="">
+                            <h3>ALIQUAM BIBENDUM</h3>
+                            <a href="">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 banner-left" style="margin-left:25%">
+                        <div class="slider">
+                            <img src="img/b-3.jpg" alt="">
+                            <h3>ALIQUAM BIBENDUM</h3>
+                            <a href="">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 banner-left">
+                        <div class="slider">
+                            <img src="img/b-1.jpg" alt="">
+                            <h3>QUISQUE PHARETRA</h3>
+                            <a href="">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<div class="container" id="h3">
+    <h3>WELCOME TO OUR SITE</h3>
+    <p class="text-justify" style="text-align: center">Maecenas ornare lobortis mi id dapibus. Sed magna leo, malesuada in luctus ut, convallis nec sapien. Nulla rhoncus, nunc sollicitudin sodales elementum, augue nunc congue tellus, a varius urna odio vitae mauris. Aenean ultricies porttitor dui quis laoreet.</p>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="h2">Aenean ultricies porttitor</p>
+            <p>Integer tincidunt ligula id lacinia placerat. Etiam rutrum fermentum tortor. Nunc tempor dui nec tincidunt eleifend. Phasellus lacinia gravida mollis. Curabitur laoreet ligula tempus, elementum dui quis, malesuada velit. Nullam cursus a magna vitae vestibulum.</p>
+            <div class="row">
+                <div class="col-xs-6">
+                    <img src="img/w-7.jpg" class="img-responsive" />
+                </div>
+                <div class="col-xs-6">
+                        <a href=""><img src="img/w-4.jpg" class="img-responsive img-thumbnail" /></a>
+                        <a href=""><img src="img/w-5.jpg" class="img-responsive img-thumbnail" /></a>
 
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <p class="h2">Nullam mattis nibh dolor</p>
+            <p>Integer tincidunt ligula id lacinia placerat. Etiam rutrum fermentum tortor. Nunc tempor dui nec tincidunt eleifend. Phasellus lacinia gravida mollis. Curabitur laoreet ligula tempus, elementum dui quis, malesuada velit. Nullam cursus a magna vitae vestibulum.</p>
+            <img src="img/w-2.jpg" alt="" class="img-responsive" height="100%">
+        </div>
+    </div>
+    <h3>OUR BEST OFFERS</h3>
+    <div class="row" id="pay">
+        <div class="col-md-3 col-xs-6 offset_left offer-left">
+            <img src="img/o-1.jpg" alt="" class="img-responsive"/>
+            <h6>$29</h6>
+            <h4>Quisque sed neque</h4>
+            <p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
+            <div class="btn1"><a href="">read more</a></div>
+        </div>
+        <div class="col-md-3 col-xs-6 offset_left offer-left">
+            <img src="img/o-2.jpg" alt="" class="img-responsive"/>
+            <h6>$70</h6>
+            <h4>Donec mattis nunc</h4>
+            <p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
+            <div class="btn1"><a href="">read more</a></div>
+        </div>
+        <div class="col-md-3 col-xs-6 offset_left offer-left">
+            <img src="img/o-3.jpg" alt="" class="img-responsive"/>
+            <h6>$46</h6>
+            <h4>Maecenas non risus</h4>
+            <p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
+            <div class="btn1"><a href="">read more</a></div>
+        </div>
+        <div class="col-md-3 col-xs-6 offset_left offer-left">
+            <img src="img/o-5.jpg" alt="" class="img-responsive"/>
+            <h6>$80</h6>
+            <h4>Nullam vitae nisl</h4>
+            <p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
+            <div class="btn1"><a href="">read more</a></div>
+        </div>
+    </div>
+</div>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+<div id="mid">
+        <div class="container">
+            <div class="mid_top">
+                <h2 style="color:#fff">Maecenas ornare lobortis</h2>
+                <p style="color:#fff">Phasellus tempor erat id erat gravida pulvinar. Aenean est felis, ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In sed magna tellus.</p>
+            </div>
+        </div>
+</div>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/anye12sd/static-page2">Static-page2</a> is maintained by <a href="https://github.com/anye12sd">anye12sd</a>.</span>
+<div class="container" style="margin-top:30px;">
+    <div class="row">
+        <div class="col-md-4 bg">
+            <span style="background-position:0px 0px"></span>
+            <h4>Vestibulum vel finibus</h4>
+            <p class="text-justify">Pellentesque sed sem bibendum, rutrum ipsum vitae, facilisis turpis. Mauris vitae metus gravida, hendrerit erat ac, facilisis ligula.</p>
+        </div>
+        <div class="col-md-4 bg">
+            <span style="background-position:-80px 0px"></span>
+            <h4>Quisque non ligula</h4>
+            <p class="text-justify">Pellentesque sed sem bibendum, rutrum ipsum vitae, facilisis turpis. Mauris vitae metus gravida, hendrerit erat ac, facilisis ligula.</p>
+        </div>
+        <div class="col-md-4 bg">
+            <span style="background-position:-160px 0px"></span>
+            <h4>Lorem ipsum dolor</h4>
+            <p class="text-justify">Pellentesque sed sem bibendum, rutrum ipsum vitae, facilisis turpis. Mauris vitae metus gravida, hendrerit erat ac, facilisis ligula.</p>
+        </div>
+    </div>
+</div>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+<div class="footer">
+    <div class="container">
+<div class="row">
+    <div class="col-md-4" style="padding-top:21px;font-size:16px;">
+        <p style="text-align: center">
+            Copyright ? 2015.Company name All rights reserved.More Templates 模板之家 - Collect from 网页模板
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2 style="text-align: center">follow us</h2>
+        <p style="text-align: center"><img src="img/social-icons.png" alt="" ></p>
+    </div>
+    <div class="col-md-4">
+        <h2 style="text-align: center">Address</h2>
+        <p style="text-align: center">The company name,</p>
+            <p style="text-align: center"> Lorem ipsum dolor,</p>
+           <p style="text-align: center">Glasglow Dr 40 Fe 72.</p>
+    </div>
+</div>
+    </div>
+</div>
+</body>
 </html>
